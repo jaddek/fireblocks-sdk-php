@@ -1,5 +1,5 @@
 {
-    "name": "tonynazarov/fireblocks-api",
+    "name": "jaddek/fireblocks-api",
     "description": "Fireblocks http api client",
     "require": {
         "php": ">=8.0",
