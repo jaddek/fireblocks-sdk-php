@@ -1,5 +1,5 @@
 {
-    "name": "jaddek/fireblocks-api",
+    "name": "jaddek/fireblocks-sdk-php",
     "description": "Fireblocks http api client",
     "require": {
         "php": ">=8.0",
