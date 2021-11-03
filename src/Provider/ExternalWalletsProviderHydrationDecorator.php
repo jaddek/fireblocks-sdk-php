@@ -10,8 +10,8 @@ use Jaddek\Fireblocks\Http\Response\ExternalWallets\Asset;
 use Jaddek\Fireblocks\Http\Response\ExternalWallets\Wallet;
 use Jaddek\Fireblocks\Http\Response\ExternalWallets\WalletCollection;
 use Jaddek\Fireblocks\Http\Response\ItemInterface;
-use Jaddek\Fireblocks\Http\Request\ExchangeAccounts\Wallet as WalletRequest;
-use Jaddek\Fireblocks\Http\Request\ExchangeAccounts\Asset as AssetRequest;
+use Jaddek\Fireblocks\Http\Request\ExternalWallets\Wallet as WalletRequest;
+use Jaddek\Fireblocks\Http\Request\ExternalWallets\Asset as AssetRequest;
 
 final class ExternalWalletsProviderHydrationDecorator extends Provider
 {

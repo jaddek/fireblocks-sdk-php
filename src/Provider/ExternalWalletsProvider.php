@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Jaddek\Fireblocks\Http\Provider;
 
 use Jaddek\Fireblocks\Http\Endpoint\ExternalWalletsInterface;
-use Jaddek\Fireblocks\Http\Request\ExchangeAccounts\Asset;
-use Jaddek\Fireblocks\Http\Request\ExchangeAccounts\Wallet;
+use Jaddek\Fireblocks\Http\Request\ExternalWallets\Asset;
+use Jaddek\Fireblocks\Http\Request\ExternalWallets\Wallet;
 
 final class ExternalWalletsProvider extends Provider
 {

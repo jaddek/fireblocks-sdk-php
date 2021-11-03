@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Jaddek\Fireblocks\Http\Request\ExchangeAccounts;
+namespace Jaddek\Fireblocks\Http\Request\ExternalWallets;
 
 class Asset implements \JsonSerializable
 {
