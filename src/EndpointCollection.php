@@ -19,7 +19,7 @@ use Jaddek\Fireblocks\Http\Endpoint\Vault;
 use Psr\Log\LoggerInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
-final class Collection
+final class EndpointCollection
 {
     private static array $instances = [];
 

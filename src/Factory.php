@@ -8,12 +8,12 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 final class Factory
 {
-    public static function buildCollection(string $key, string $secretKey): Collection
+    public static function buildCollection(string $key, string $secretKey): EndpointCollection
     {
         $signer     = new Signer($key, $secretKey);
         $httpClient = self::getHttpClient($key);
 
-        return new Collection($httpClient, $signer);
+        return new EndpointCollection($httpClient, $signer);
     }
 
     public static function buildEndpoint(string $class, string $key, string $secretKey): Endpoint
