@@ -13,7 +13,7 @@ class Signer
     private const BODY_ALGO             = 'sha256';
     private const MINIMUM_NONCE         = 1000;
 
-    public function __construct(private string $apiKey, private string $secretKeyFile)
+    public function __construct(private string $apiKey, protected string $secretKeyFile)
     {
 
     }
