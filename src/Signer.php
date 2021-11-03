@@ -33,7 +33,7 @@ class Signer
 
     }
 
-    private function getSecretKey(): string
+    protected function getSecretKey(): string
     {
         if (file_exists($this->secretKeyFile) === false) {
             throw new \Exception('File with secret key not found');
@@ -56,7 +56,7 @@ class Signer
      * The JWT should be signed with the Fireblocks API secret key
      * and the RS256 (RSASSA-PKCS1-v1_5 using SHA-256 hash) algorithm.
      */
-    private function getAccessToken(array $payload, string $secret): string
+    protected function getAccessToken(array $payload, string $secret): string
     {
         return JWT::encode($payload, $secret, self::JWT_ALGO);
     }
@@ -74,7 +74,7 @@ class Signer
      * @param array|null $body
      * @return array
      */
-    private function getPayload(string $uri, null|array|\JsonSerializable $body = null): array
+    protected function getPayload(string $uri, null|array|\JsonSerializable $body = null): array
     {
         $time = time();
 
