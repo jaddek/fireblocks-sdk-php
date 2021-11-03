@@ -24,7 +24,7 @@ final class EndpointCollection
     private static array $instances = [];
 
     public function __construct(
-        private HttpClientInterface $client,
+        private HttpClientInterface $fireblocksClient,
         private Signer              $signer,
         private ?LoggerInterface    $logger = null
     )
@@ -35,7 +35,7 @@ final class EndpointCollection
     private function getEndpoint(string $class): mixed
     {
         if (!(self::$instances[$class] ?? null) instanceof Endpoint) {
-            self::$instances[$class] = new $class($this->client, $this->signer, $this->logger);
+            self::$instances[$class] = new $class($this->fireblocksClient, $this->signer, $this->logger);
         }
 
         return self::$instances[$class];
