@@ -6,7 +6,7 @@ namespace Jaddek\Fireblocks\Http;
 
 use Firebase\JWT\JWT;
 
-final class Signer
+class Signer
 {
     private const EXPIRATION_IN_SECONDS = 30;
     private const JWT_ALGO              = 'RS256';
