@@ -9,10 +9,12 @@ use Jaddek\Fireblocks\Http\Response\CollectionInterface;
 use Jaddek\Fireblocks\Http\Response\ItemInterface;
 use Jaddek\Fireblocks\Http\Response\Vault\Account;
 use Jaddek\Fireblocks\Http\Response\Vault\AccountCollection;
+use Jaddek\Fireblocks\Http\Response\Vault\Address;
 use Jaddek\Fireblocks\Http\Response\Vault\AddressCollection;
 use Jaddek\Fireblocks\Http\Response\Vault\AssetBalance;
 use Jaddek\Fireblocks\Http\Response\Vault\AssetValueBalance;
 use Jaddek\Fireblocks\Http\Response\Vault\MaximumSpendableAmount;
+use Jaddek\Fireblocks\Http\Response\Vault\NewAddress;
 use Jaddek\Fireblocks\Http\Response\Vault\UnspentInputsCollection;
 
 final class  VaultProviderHydrationDecorator
@@ -68,9 +70,9 @@ final class  VaultProviderHydrationDecorator
         return Hydrator::instance($this->provider->getAccountAddresses($vaultAccountId, $assetId), AddressCollection::class);
     }
 
-    public function createDepositAddress(string $vaultAccountId, string $assetId): array
+    public function createDepositAddress(string $vaultAccountId, string $assetId): NewAddress|ItemInterface
     {
-        return $this->provider->createDepositAddress($vaultAccountId, $assetId);
+        return Hydrator::instance($this->provider->createDepositAddress($vaultAccountId, $assetId), NewAddress::class);
     }
 
     public function renameAddress(string $vaultAccountId, string $assetId, string $addressId): array
