@@ -19,8 +19,10 @@ final class DestinationTransferPeerPath extends Request
 
     protected ?string $type = null;
 
+
     public function __construct(
         protected string $id,
+        protected ?OneTimeAddress $oneTimeAddress = null
     )
     {
 
@@ -83,5 +85,13 @@ final class DestinationTransferPeerPath extends Request
     public function getId(): string
     {
         return $this->id;
+    }
+
+    /**
+     * @return OneTimeAddress|null
+     */
+    public function getOneTimeAddress(): ?OneTimeAddress
+    {
+        return $this->oneTimeAddress;
     }
 }
