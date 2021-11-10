@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Jaddek\Fireblocks\Http\Provider;
 
-use Jaddek\Fireblocks\Http\Enum\FeeLevels;
+use Jaddek\Fireblocks\Http\Enum\Transactions\FeeLevels;
 use Jaddek\Fireblocks\Http\Endpoint\TransactionsInterface;
 use Jaddek\Fireblocks\Http\Query\QueryInterface;
 use Jaddek\Fireblocks\Http\Request\Transactions\Transaction as CreateTransactionRequest;
