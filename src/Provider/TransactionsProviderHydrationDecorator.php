@@ -4,16 +4,14 @@ declare(strict_types=1);
 
 namespace Jaddek\Fireblocks\Http\Provider;
 
-use App\Response\Transactions\AddressStatus;
-use Jaddek\Fireblocks\Http\Endpoint\TransactionsInterface;
 use Jaddek\Fireblocks\Http\Hydrator;
 use Jaddek\Fireblocks\Http\Query\QueryInterface;
 use Jaddek\Fireblocks\Http\Request\Transactions\Transaction as CreateTransactionRequest;
 use Jaddek\Fireblocks\Http\Response\CollectionInterface;
 use Jaddek\Fireblocks\Http\Response\ItemInterface;
+use Jaddek\Fireblocks\Http\Response\Transactions\AddressStatus;
 use Jaddek\Fireblocks\Http\Response\Transactions\Transaction;
 use Jaddek\Fireblocks\Http\Response\Transactions\TransactionCollection;
-use Jaddek\Fireblocks\Http\Response\Users\UserCollection;
 
 final class TransactionsProviderHydrationDecorator
 {
@@ -68,7 +66,7 @@ final class TransactionsProviderHydrationDecorator
         return Hydrator::instance($this->provider->validateDestinationAddress($assetId, $address), AddressStatus::class);
     }
 
-    public function getNetworkFee(string $assetId): array
+    public function getNetworkFee(string $assetId): AddressStatus|ItemInterface
     {
         return Hydrator::instance($this->provider->getNetworkFee($assetId), AddressStatus::class);
     }

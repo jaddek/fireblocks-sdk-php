@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Response\Transactions;
+namespace Jaddek\Fireblocks\Http\Response\Transactions;
 
 use Jaddek\Fireblocks\Http\Response\ItemInterface;
 

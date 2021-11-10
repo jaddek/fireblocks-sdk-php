@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Response\Transactions;
+namespace Jaddek\Fireblocks\Http\Response\Transactions;
 
 final class NetworkFee
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Enum\Transactions;
+namespace Jaddek\Fireblocks\Http;
 
 interface FeeLevels
 {
