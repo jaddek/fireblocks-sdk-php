@@ -1,6 +1,7 @@
 {
     "name": "jaddek/fireblocks-sdk-php",
     "description": "Fireblocks http api client",
+    "license": "MIT",
     "require": {
         "php": ">=8.0",
         "symfony/http-client": "^5.3",
